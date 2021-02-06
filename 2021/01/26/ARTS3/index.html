@@ -20,15 +20,20 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Lee">
-<meta property="og:url" content="http://example.com/archives/index.html">
+  <meta name="description" content="ARTS3Algorithm滑动窗口 LeetCode #1243 123456789101112131415fun maxScore(cardPoints: IntArray, k: Int): Int &amp;#123;    val range &#x3D; cardPoints.size - k    var sum &#x3D; 0    repeat(range) &amp;#123;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ARTS3">
+<meta property="og:url" content="http://example.com/2021/01/26/ARTS3/index.html">
 <meta property="og:site_name" content="Lee">
+<meta property="og:description" content="ARTS3Algorithm滑动窗口 LeetCode #1243 123456789101112131415fun maxScore(cardPoints: IntArray, k: Int): Int &amp;#123;    val range &#x3D; cardPoints.size - k    var sum &#x3D; 0    repeat(range) &amp;#123;">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-01-26T12:04:57.000Z">
+<meta property="article:modified_time" content="2021-02-06T03:23:41.658Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="ARTS">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/archives/">
+<link rel="canonical" href="http://example.com/2021/01/26/ARTS3/">
 
 
 <script id="page-configurations">
@@ -36,12 +41,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>归档 | Lee</title>
+  <title>ARTS3 | Lee</title>
   
 
 
@@ -139,90 +144,89 @@
         <div class="content-wrap">
           
 
-          <div class="content archive">
+          <div class="content post posts-expand">
             
 
+    
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 3 篇日志。 继续努力。</span>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/01/26/ARTS3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lee">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          ARTS3
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-01-26 20:04:57" itemprop="dateCreated datePublished" datetime="2021-01-26T20:04:57+08:00">2021-01-26</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-02-06 11:23:41" itemprop="dateModified" datetime="2021-02-06T11:23:41+08:00">2021-02-06</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2021</span>
+        <h2 id="ARTS3"><a href="#ARTS3" class="headerlink" title="ARTS3"></a>ARTS3</h2><h2 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h2><p>滑动窗口 <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/maximum-points-you-can-obtain-from-cards/">LeetCode #1243</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">fun maxScore(cardPoints: IntArray, k: Int): Int &#123;</span><br><span class="line">    val range &#x3D; cardPoints.size - k</span><br><span class="line">    var sum &#x3D; 0</span><br><span class="line">    repeat(range) &#123;</span><br><span class="line">        sum +&#x3D; cardPoints[it]</span><br><span class="line">    &#125;</span><br><span class="line">    var minSum &#x3D; sum</span><br><span class="line">    var tempSum &#x3D; sum</span><br><span class="line">    for (i in range until cardPoints.size) &#123;</span><br><span class="line">        sum +&#x3D; cardPoints[i]</span><br><span class="line">        tempSum +&#x3D; cardPoints[i] - cardPoints[i - range]</span><br><span class="line">        minSum &#x3D; minOf(minSum, tempSum)</span><br><span class="line">    &#125;</span><br><span class="line">    return sum - minSum</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><h2 id="Tip"><a href="#Tip" class="headerlink" title="Tip"></a>Tip</h2><p><code>TabLayout</code> 自定义 <code>Tab</code></p>
+<h2 id="Share"><a href="#Share" class="headerlink" title="Share"></a>Share</h2>
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    
+    
+    
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-01-26T20:04:57+08:00"
-              content="2021-01-26">
-          01-26
-        </time>
-      </div>
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/ARTS/" rel="tag"># ARTS</a>
+          </div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/01/26/ARTS3/" itemprop="url">
-            <span itemprop="name">ARTS3</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-01-20T20:21:55+08:00"
-              content="2021-01-20">
-          01-20
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/01/20/ARTS2/" itemprop="url">
-            <span itemprop="name">ARTS2</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-01-13T21:39:32+08:00"
-              content="2021-01-13">
-          01-13
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/01/13/ARTS1/" itemprop="url">
-            <span itemprop="name">ARTS1</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
+        
 
 
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/01/20/ARTS2/" rel="prev" title="ARTS2">
+      <i class="fa fa-chevron-left"></i> ARTS2
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-  </div>
+      </footer>
+    
+  </article>
   
   
-  
-
   
 
 
@@ -275,6 +279,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ARTS3"><span class="nav-number">1.</span> <span class="nav-text">ARTS3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Algorithm"><span class="nav-number">2.</span> <span class="nav-text">Algorithm</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Review"><span class="nav-number">3.</span> <span class="nav-text">Review</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tip"><span class="nav-number">4.</span> <span class="nav-text">Tip</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Share"><span class="nav-number">5.</span> <span class="nav-text">Share</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
